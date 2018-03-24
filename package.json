@@ -1,6 +1,6 @@
 {
-    "name": "discoverer",
-    "description": "Custom theme for The Discoverer blog",
+    "name": "Life Less Wasteful",
+    "description": "Custom theme for the Life Less Wasteful blog",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=1.2.0"
@@ -11,9 +11,9 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
-        "name": "Inboxlab",
-        "email": "zack@inboxlab.com",
-        "url": "https://www.inboxlab.com"
+        "name": "creachBuilt",
+        "email": "zackcreach@gmail.com",
+        "url": "https://zackcreach.com"
     },
     "gpm": {
         "type": "theme",
