@@ -1,0 +1,15 @@
+<section class="gallery">
+    <div class="container container--1400 row gallery__container">
+        {{#get "posts" limit="4" filter="tags:{{tags.1.slug}}+id:-{{id}}" as |secondary_tag|}}
+            {{#foreach posts}}
+                {{#if secondary_tag}}
+                    <a href="{{url}}" class="gallery__item" style="background-image: url({{feature_image}}); background-size: cover;">
+                        <h4 class="gallery__title">
+                            {{title}}
+                        </h4>
+                    </a>
+                {{/if}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+</section>

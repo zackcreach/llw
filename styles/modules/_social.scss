@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important;
+  list-style: none !important;
+  
+  &__item {
+    display: block;
+    text-align: center;
+    transition: $transition-ease;
+  }
+  
+  &__item:hover {
+    transform: translateY(-2px);
+  }
+  
+  &__item:active {
+    transform: translateY(1px);
+  }
+  
+  &__image {
+    height: 18px;
+    margin: 0 !important;
+    }
+}

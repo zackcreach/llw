@@ -1,0 +1,67 @@
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+    &__container {
+        position: relative;
+        background-color: transparent;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include atMedium {
+            justify-content: space-between;
+            padding: 0 80px 0 80px;
+        }
+        
+        @include atXLarge {
+            padding: 0;
+            margin: 0 auto 0 auto;
+            max-width: $container-1200;
+        }
+    }
+
+    &__menu {
+        position: relative;
+    }
+
+    &__background {
+        position: absolute;
+        background-position: center;
+        top: 0;
+        height: 100%;
+        max-height: 1000px;
+        width: 100%;
+        z-index: -1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: $transition-ease;
+        }
+        
+        @include atLarge {
+            height: 630px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    &__logo-image {
+        padding: 0 0 0 0;
+    }
+}

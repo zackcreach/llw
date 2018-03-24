@@ -1,0 +1,102 @@
+.button {
+  padding: 0 15px;
+  height: 45px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: $transition-ease;
+  border: none;
+  z-index: 1;
+  
+  @include atMedium {
+      color: $text-subtitle-color;
+  }
+  
+  &__white {
+      width: 230px;
+      border: 0.8px solid rgba(234,234,234,0.5);
+      background-color: #FFFFFF;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.04);
+      color: $text-subtitle-mobile-color;
+      font-size: .56rem;
+      letter-spacing: 4px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: $transition-ease;
+      z-index: 1;
+      
+      @include atMedium {
+          color: $text-subtitle-color;
+      }
+      
+      &:hover {
+          box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+          color: darken($text-subtitle-mobile-color, 35%);
+          transform: translateY(-1px);
+          transition: $transition-ease;
+          cursor: pointer;
+          
+          @include atMedium {
+              color: darken($text-subtitle-color, 35%);
+          }
+      }
+  }
+  
+  &__clear {
+      width: 230px;
+      border: 0.8px solid #FFFFFF;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: .62rem;
+      line-height: 20px;
+      letter-spacing: 4px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: $transition-ease;
+      z-index: 1;
+      
+      &:hover {
+          transform: translateY(-1px);
+          transition: $transition-ease;
+          cursor: pointer;
+      }
+  }
+  
+  &__teal {
+      width: 184px;
+      background-color: $primary-color;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.04);
+      color: white;
+      font-size: .68rem;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: $transition-ease;
+      z-index: 1;
+  
+      &:hover {
+          box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+          background: darken($primary-color, 2%);
+          transform: translateY(-1px);
+          transition: $transition-ease;
+          cursor: pointer;
+      }
+      
+      &:active {
+          background: darken($primary-color, 2%);
+      }
+  }
+
+  &:active {
+      transform: translateY(1px);
+      transition: $transition-ease;
+      cursor: pointer;
+  }
+  
+  &:focus {
+      outline: 0;
+      cursor: pointer;
+  }
+}
+
+

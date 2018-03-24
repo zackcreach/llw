@@ -1,0 +1,171 @@
+.itinerary {
+  margin: 60px 0 60px 0;
+  
+  @include atLarge {
+    margin: 77px 0 110px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include atLarge {
+      flex-wrap: nowrap;
+    }
+
+    @include atCustom(1550px) {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    background-position: 150px center;
+    background-repeat: no-repeat;
+    
+    @include atMedium {
+      padding: 0 100px 0 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 150px;
+      width: calc(100% - 150px);
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      transition: $transition-ease;
+    }
+    
+    &:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__details {
+    background: white;
+    z-index: 1;
+
+    @include atMedium {
+      width: 300px;
+      margin: 34px 0 34px 0;
+      border: 1px solid #EEE;
+      padding: 54px 30px 0 30px;
+    }
+  }
+
+  &__title {
+    font-size: 1.68rem;
+    line-height: 40px;
+    padding: 0 0 18px 0;
+  }
+
+  &__text {
+  }
+
+  &__text--highlight {
+    color: $primary-color;
+  }
+
+  &__categories {
+    padding: 30px 0 0 0;
+    
+    @include atMedium {
+      padding: 30px 0 54px 0;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #BBB;
+    line-height: 24px;
+    border-radius: 20px;
+    border: 0.8px solid rgba(234,234,234,0.79);
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.04);
+    padding: 0 12px;
+    margin: 0 4px 9px 0;
+    transition: $transition-ease;
+    
+    &:hover {
+      color: #888;
+      box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.1);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  &__schedule {
+    padding: 40px 0 0 0;
+    width: 100%;
+    
+    @include atLarge {
+      width: 380px;
+      padding: 16px 0 0 60px;
+    }
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    line-height: 38px;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid #EEE;
+  }
+
+  &__list {
+    padding: 15px 0 0 0;
+  }
+
+  &__item {
+    padding: 0 0 16px 65px;
+    position: relative;
+  }
+
+  &__thumbnail {
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: $transition-ease;
+  }
+
+  &__subtitle {
+    padding: 5px 0 7px 0;
+    letter-spacing: normal;
+  }
+
+  &__link {
+    color:inherit;
+    transition: $transition-ease;
+
+    &:hover .itinerary__thumbnail {
+      opacity: 0.8;
+    }
+  }
+
+  &__button {
+    color: #BBB;
+    border-color: #EEE;
+    margin: 30px 0 0 0;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.04);
+    background: #FFF;
+
+    &:hover {
+      box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.1);
+      color: #888;
+      border-color: #DDD;
+    }
+    
+    @include atMedium {
+      margin: 30px 0 54px 0;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+$linework-transition: all .2s ease;
+
+.linework {
+
+    &__story {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-right: 0.5px solid $text-subtitle-color;
+
+        &::before {
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            content: '';
+            top: 50%;
+            background: $text-subtitle-color; 
+        }
+    }
+
+    &__menu {
+        position: relative;
+        width: 26px;
+        height: 18px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        transition: $linework-transition;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            height: 1px;
+            width: 20px;
+            background: #000;
+            transition: $linework-transition;
+        }
+        
+        &:hover::after {
+            width: 26px;
+        }
+    }
+
+    &__menu--white {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        
+        &::after {
+            background: white;
+        }
+    }
+
+    &__arrow {
+        margin: 10px;
+        height: 45px;
+        width: 45px;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        transition: $transition-ease;
+        cursor: pointer;
+
+        &:hover {
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+        }
+    }
+    
+    &__arrow--left {
+        transform: rotate(315deg);
+        
+        &:active {
+            transform: rotate(315deg) translate3D(-2px, -2px, 0);
+        }
+    }
+    
+    &__arrow--right {
+        transform: rotate(135deg);
+        
+        &:active {
+            transform: rotate(135deg) translate3D(-2px, -2px, 0);
+        }
+    }
+
+    &__progress {
+        border-bottom: 1px solid rgba(159,159,159,0.71);
+        height: 4px;
+        width: 28px;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: $transition-ease;
+
+        &:hover {
+            border-color: #FFFFFF;
+        }
+
+        &--active {
+            border-color: #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+// Media Queries
+@mixin atSmall {
+	@media (min-width: 340px) {
+		@content;
+	}
+}
+
+@mixin atMedium {
+	@media (min-width: 668px) {
+		@content;
+	}
+}
+
+@mixin atLarge {
+	@media (min-width: 1030px) {
+		@content;
+	}
+}
+
+@mixin atXLarge {
+	@media (min-width: 1350px) {
+		@content;
+	}
+}
+
+@mixin atCustom($minWidth) {
+	@media (min-width: $minWidth) {
+		@content;
+	}	
+}
+
+// Visibility Toggles
+@mixin hidden {
+	visibility: hidden;
+	display: none;
+}
+
+@mixin visible($display: block) {
+	@if $display == block {
+		visibility: visible;
+		display: block;
+	} @else {
+		visibility: visible;
+		display: $display;
+	}
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

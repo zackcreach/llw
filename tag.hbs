@@ -1,0 +1,30 @@
+{{!< default}}
+
+{{> "banner"}}
+
+{{#tag}}
+    <div class="hero hero__tag">
+        <div class="hero__background" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/banner-hero-background.jpg'}}{{/if}}); background-size: cover;"></div>
+        <div class="hero__content">
+                <h3 class="hero__subtitle">
+                    <a href="/" class="hero__link">
+                        Discoverer Blog
+                    </a>
+                </h3>
+                <h1 class="hero__title">
+                    {{name}}
+                </h1>
+        </div>
+    </div>
+{{/tag}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="container tag" role="main">
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+</main>
+{{> "gallery"}}

@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{> "banner"}}
+
+{{#post}}
+<div class="post">
+    <div class="hero hero__post">
+        <div class="hero__background" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/header-hero-background.jpg'}}{{/if}}); background-size: cover;"></div>
+        <div class="hero__content">
+                <h3 class="hero__subtitle">
+                    {{#primary_tag}}
+                        <a class="hero__link" href={{url}}>
+                            {{name}}
+                        </a>
+                    {{/primary_tag}}
+                </h3>
+                <h1 class="hero__title">
+                    {{title}}
+                </h1>
+        </div>
+    </div>
+    <div class="post__container">
+        <div class="post__header">
+            <div class="post__date">
+                {{date published_at format="MMM DD, YYYY"}}
+            </div>
+            <div class="post__categories">
+                {{#foreach tags limit="6"}}
+                    <a class="post__category" href="{{url}}">
+                        {{name}}
+                    </a>
+                {{/foreach}}
+            </div>
+        </div>
+        <div class="post__content">
+            {{content}}
+        </div>
+        {{> "modal"}}
+    </div>
+</div>
+
+{{> "gallery"}}
+
+{{/post}}
