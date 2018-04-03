@@ -28,7 +28,7 @@
     ],
     "scripts": {
         "dev": "concurrently \"npm run sync\" \"npm run nodemon\" \"npm run watch\" \"npm run sass\"",
-        "sync": "browser-sync start --port 4444 --proxy http://localhost:2369 --files 'assets/**/*' --no-ghost-mode",
+        "sync": "browser-sync start --port 4444 --proxy http://localhost:2368 --files 'assets/**/*' --no-ghost-mode",
         "nodemon": "cd ../../.. && nodemon current/index.js --watch content/themes/llw --ext hbs",
         "watch": "webpack --watch --progress",
         "sass": "gulp watch",
