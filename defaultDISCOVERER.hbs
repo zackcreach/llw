@@ -8,32 +8,37 @@
     {{#is "home"}}
         <title>{{@blog.title}}</title>
     {{else}}
-        <title>{{@blog.title}} – {{meta_title}}</title>
+        <title>{{@blog.title}} | {{meta_title}}</title>
     {{/is}}
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Lato:100,300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Open+Sans:300,400,600,800">
     <link rel="stylesheet" type="text/css" href="{{asset "styles/styles.css"}}" />
     {{#is "tag, post, page"}}
         <link rel="stylesheet" type="text/css" href="{{asset "styles/screen.css"}}" />
     {{/is}}
 
     {{!-- Global site tag (gtag.js) - Google Analytics --}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116714616-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101892464-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-116714616-1');
+        gtag('config', 'UA-101892464-1');
     </script>
+
+    {{#is "post"}}
+        {{!-- Google Adsense Main Script --}}
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {{/is}}
     
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
-    <div class="wrapper">
-        {{{body}}}
-    </div>
+    {{{body}}}
+    {{> "footer"}}
+
 
     {{!-- Discoverer Bundle --}}
     <script type="text/javascript" src="{{asset "js/bundle.js"}}"></script>

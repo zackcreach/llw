@@ -2,32 +2,26 @@
 $test-bg-color: rgba(255,0,0,.5);
 
 // Global font families
-$font-primary: 'Open Sans', sans-serif;
+$font-primary: 'Lato', sans-serif;
 $font-secondary: 'Playfair Display', serif;
 
-// Global text colors
-$text-body-color: #4c4c4c;
-$text-title-color: #555555;
-$text-subtitle-color: #a8a8a8;
-$text-subtitle-mobile-color: #6c6c6c;
-
 // Global accent colors
-$primary-color: #25C2B4;
+$color-primary: #2d2123;
+$color-secondary: #c6b1b3;
+$color-tertiary: #e6ddde;
 
 // Forms
 $form-input-color: rgba(255,255,255,0.29);
 
 // Gutter/spacing
-$gutter-spacing-desktop: 80px;
-$gutter-spacing-mobile: 32px;
-$container-1200: 1200px;
-$container-1400: 1400px;
+$padding-desktop: 30px;
+$padding-mobile: 15px;
+$container: 900px;
+$container-wide: 1150px;
 
 // Animations
-$transition-ease: all .2s ease;
+$transition-ease: all .3s ease-in-out;
 $transition-bezier: all .3s cubic-bezier(0.25, 0.1, 0.36, 2.24);
-$transition-carousel: all .5s ease;
-$transition-discovery: all .3s ease;
 
 // Images
 $padding-gallery: 6px;

@@ -1,223 +1,60 @@
 {{!< default}}
 
-{{> "banner"}}
-
-{{#get "posts" filter="tags:hero"}}
-    {{#foreach posts limit="1"}}
-        <div class="banner__background" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/banner-hero-background.jpg'}}{{/if}}); background-size: cover;"></div>
-        {{!-- <div class="banner__background" style="background-image: url({{asset "images/header-hero-background.jpg"}}); background-size: cover;"></div> --}}
-        <section class="hero hero--t-margin">
-            <div class="container container--1400">
-                <div class="hero__carousel">
-                    <div class="carousel">
-                        <article class="carousel__item">
-                            <h3 class="carousel__subtitle">{{#primary_tag}}{{name}}{{/primary_tag}}</h3>
-                            <h1 class="carousel__title">{{title}}</h1>
-                            <a href="{{url}}">
-                                <button class="button button__clear carousel__button">
-                                    Read More
-                                </button>
-                            </a>
-                            {{!-- <h3 class="carousel__subtitle">Tips &amp; Tricks</h3>
-                            <h1 class="carousel__title">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit Sed Diam Nonummy Nibh.</h1>
-                            <a href="">
-                                <button class="button button__clear carousel__button">
-                                    Read More
-                                </button>
-                            </a> --}}
-                        </article>
-                        <!-- <div class="hero__arrows">
-                            <div class="linework linework__arrow linework__arrow--left"></div>
-                            <div class="linework linework__arrow linework__arrow--right"></div>
-                        </div> -->
-                    </div>
-                    <div class="hero__progress">
-                        <!-- <div class="linework linework__progress"></div>
-                        <div class="linework linework__progress"></div>
-                        <div class="linework linework__progress"></div>
-                        <div class="linework linework__progress"></div>
-                        <div class="linework linework__progress"></div> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    {{/foreach}}
-{{/get}}
-<section class="featured">
-    <div class="container featured__container">
-        {{#get "posts" include="tags" filter="tags:featured"}}
-            {{#foreach posts limit="3"}}
-                <article class="featured__item">
-                    {{#primary_tag}}
-                        <a href="{{url}}">
-                            <h3 class="featured__subtitle">
-                                {{name}}
-                            </h3>
-                        </a>
-                    {{/primary_tag}}
-                    <a href="{{url}}">
-                        <h2 class="featured__title">
-                            {{title}}
-                        </h2>
-                        <p class="featured__text">
-                            {{excerpt words="22"}}...
-                        </p>
-                    </a>
-                </article>
-            {{/foreach}}
-            {{!-- <h3 class="carousel__subtitle">Guide Me</h3>
-            <h1 class="carousel__title">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit Sed Diam Nonummy Nibh.</h1>
-            <a href="">
-                <button class="button button__clear carousel__button">
-                    Read More
-                </button>
-            </a> --}}
-            {{!-- <article class="featured__item">
-                <a href="/tag/">
-                    <h3 class="featured__subtitle">
-                        Discoveries
-                    </h3>
-                </a>
-                <a href="">
-                    <h2 class="featured__title">
-                        Trip To Iqaluit In Nunavut A Canadian Arctic City
-                    </h2>
-                    <p class="featured__text">
-                        Brent Conrad talks with everyone from, frequent travelers to the busy family that can only get away for vacation every couple
-                        of years.
-                    </p>
-                </a>
-            </article> --}}
-        {{/get}}
-    </div>
-</section>
-<section class="gallery">
-    <div class="container container--1400 row gallery__container">
-        {{#get "posts" filter="tags:gallery"}}
-            {{#foreach posts limit="4"}}
-                <a href="{{url}}" class="row__col-3 gallery__item" style="background-image: url({{feature_image}}); background-size: cover;">
-                    <h4 class="gallery__title">
-                        {{title}}
-                    </h4>
-                </a>
-            {{/foreach}}
-            {{!-- <a href="" class="row__col-3 gallery__item" style="background-image: url({{asset "images/article-1.jpg"}}); background-size: cover;">
-                <h4 class="gallery__title">
-                    Les Houches The Hidden Gem Of The Chamonix Valley
-                </h4>
-            </a> --}}
-        {{/get}}
-    </div>
-</section>
-<section class="itinerary">
-    <div class="container itinerary__container">
-        {{#get "posts" include="tags" filter="tags:itinerary"}}
-            {{#foreach posts limit="1"}}
-                <article class="itinerary__content" style="background-image: url({{feature_image}}); background-size: cover;">
-                    <div class="itinerary__details">
-                        <a href="{{url}}">
-                            <h2 class="itinerary__title">
-                                {{title}}
-                            </h2>
-                            <p class="itinerary__text">
-                                {{excerpt words="30"}}...
-                            </p>
-                        </a>
-                        {{!-- <div class="itinerary__categories">
-                            {{#foreach tags limit="6"}}
-                                <a class="itinerary__category" href="{{url}}">
-                                    {{name}}
-                                </a>
-                            {{/foreach}}
-                        </div> --}}
-                        <a href="{{url}}">
-                            <button class="button button__clear itinerary__button">
-                                Read More
-                            </button>
-                        </a>
-                    </div>
-                </article>
-            {{/foreach}}
-            {{!-- <article class="itinerary__content" style="background-image: url({{asset "images/article-1.jpg"}}); background-size: cover;">
-                <div class="itinerary__details">
-                    <a href="">
-                        <h2 class="itinerary__title">
-                            Global Travel And Vacations Luxury Travel On A Tight Budget
-                        </h2>
-                        <p class="itinerary__text">
-                            Brent Conrad talks with everyone from, frequent travelers to the busy family that can only get away for vacation every couple
-                            of years.
-                        </p>
-                    </a>
-                    <div class="itinerary__categories">
-                        <a class="itinerary__category" href="">
-                            Eating/Drinking
-                        </a>
-                        <a class="itinerary__category" href="">
-                            Nightlife
-                        </a>
-                        <a class="itinerary__category" href="">
-                            Adventure
-                        </a>
-                        <a class="itinerary__category" href="">
-                            Shopping
-                        </a>
-                    </div>
-                </div>
-            </article> --}}
-        {{/get}}
-        <aside class="itinerary__schedule">
-            <h1 class="itinerary__heading">
-                Read More
-            </h1>
-            <ul class="itinerary__list">
-                {{#get "posts" filter="tags:read-more"}}
-                    {{#foreach posts limit="3"}}
-                        <li class="itinerary__item">
-                            <a href="{{url}}" class="itinerary__link">
-                                <div class="itinerary__thumbnail" style="background-image: url({{feature_image}}); background-size: cover;"></div>
-                                <h5 class="itinerary__subtitle">
-                                    {{title}}
-                                </h5>
-                                <p class="itinerary__text">
-                                    {{excerpt words="16"}}...
-                                </p>
-                            </a>
-                        </li>
-                    {{/foreach}}
-                {{/get}}
-            </ul>
-        </aside>
-    </div>
-</section>
-<section class="categories">
-    <div class="container container--1400 categories__container">
-        <a href="/tag/discoverer-spotlight" class="categories__block-start" style="background-image: url({{asset "images/categories-spotlight-background.jpg"}}); background-size: cover;">
-            <p class="categories__text">
-                Discoverer Spotlight
-            </p>
-        </a>
-        <div class="categories__block-wrapper">
-            <a href="/tag/our-backpack" class="categories__block" style="background-image: url({{asset "images/categories-ourbackpack-background.jpg"}}); background-size: cover;">
-                <p class="categories__text">
-                    Our Backpack
-                </p>
-            </a>
-            <a href="/tag/tips-tricks" class="categories__block" style="background-image: url({{asset "images/categories-tipstricks-background.jpg"}}); background-size: cover;">
-                <p class="categories__text">
-                    Tips &amp; Tricks
-                </p>
-            </a>
-            <a href="/tag/travel-tales" class="categories__block" style="background-image: url({{asset "images/categories-traveltales-background.jpg"}}); background-size: cover;">
-                <p class="categories__text">
-                    Travel Tales
-                </p>
-            </a>
-            <a href="/tag/discoveries" class="categories__block" style="background-image: url({{asset "images/categories-discoveries-background.jpg"}}); background-size: cover;">
-                <p class="categories__text">
-                    Discoveries
-                </p>
-            </a>
+<section class="container container--wide home">
+  <header class="header home__header">
+    <h1 class="logo logo--large header__logo">
+      Life Less Wasteful
+    </h1>
+    <p class="header__tagline">
+      Beard helvetica green juice fanny pack, 8-bit bitters art party cold-pressed occupy heirloom.
+    </p>
+  </header>
+  <main class="home__main">
+    {{#get "posts" filter="featured:true" limit="1" as |featured|}}
+    {{#foreach featured}}
+      <div class="container home__featured">
+        <div class="stripe">
+          <h3 class="stripe__date">{{date format="MMMM D, YYYY"}}</h3>
         </div>
-    </div>
+        <h1 class="home__featured-title">
+          <a class="home__link" href={{url}}>
+            {{title}}
+          </a>
+        </h1>
+        <a class="home__link home__featured-image-container" href={{url}}>
+          <img class="home__featured-image" src={{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/home__featured.jpg'}}{{/if}} />
+        </a>
+        <a class="home__link" href={{url}}>
+          <button class="button button__solid home__button">
+            Read More
+          </button>
+        </a>
+      </div>
+    {{/foreach}}
+    {{/get}}
+    {{#get "posts" limit="8" as |blocks|}}
+      <div class="home__blocks">
+        {{#foreach blocks}}
+        <div class="home__block">
+          <h3 class="home__block-date">
+            {{date format="MMMM D, YYYY"}}
+          </h3>
+          <h2 class="home__block-title">
+            <a class="home__link" href={{url}}>
+              {{title}}
+            </a>
+          </h2>
+          <a class="home__link home__block-image-container" href={{url}}>
+            <img class="home__block-image" src={{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/home__block.jpg'}}{{/if}} />
+          </a>
+          <a class="home__link" href={{url}}>
+            <button class="button button__solid home__button">
+              Read More
+            </button>
+          </a>
+        </div>
+        {{/foreach}}
+      </div>
+    {{/get}}
+  </main>
 </section>

@@ -1,0 +1,38 @@
+.header {
+  
+  &__logo {
+    color: lighten($color-primary, 80%);
+    padding: 14vmin 0 3vmin;
+    text-align: center;
+    
+    @include atSmall {
+      padding: 10vmin 0 3vmin;
+    }
+    
+    @include atLarge {
+      padding: 65px 0 25px;
+    }
+  }
+
+  &__tagline {
+    color: lighten($color-primary, 75%);
+    // color: lighten($color-primary, 40%);
+    font-size: 0.75rem;
+    line-height: 1.3rem;
+    font-weight: 300;
+    padding: 0 0 7vmin;
+    max-width: 300px;
+    text-align: center;
+    
+    @include atSmall {
+      padding: 0 0 5vmin;
+      max-width: 400px;
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+    
+    @include atLarge {
+      padding: 0 0 40px;
+    }
+  }
+}

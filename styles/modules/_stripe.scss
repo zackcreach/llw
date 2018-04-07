@@ -1,0 +1,23 @@
+.stripe {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $color-secondary;
+    box-shadow: 1px 1px 0px lighten($color-primary, 78%);
+  }
+  
+  &__date {
+    color: lighten($color-primary, 40%);
+    background-color: $color-tertiary;
+    padding: 0 20px;
+    z-index: 1;
+  }
+}

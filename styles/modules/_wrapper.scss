@@ -1,0 +1,30 @@
+.wrapper {
+  min-height: 100vh;
+  border-top: 6px solid lighten($color-tertiary, 5%);
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-secondary;
+    z-index: -2;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200vh;
+    background-image: radial-gradient($color-tertiary, $color-secondary 70%, $color-secondary);
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}

@@ -1,16 +1,12 @@
 .container {
-  padding: 0 $gutter-spacing-mobile 0 $gutter-spacing-mobile;
-  
-  @include atLarge {
-    margin: 0 auto 0 auto;
-    max-width: $container-1200;
-    
-    &--1400 {
-      max-width: $container-1400;
-    }
+  max-width: $container;
+  margin: 0 auto;
+
+  &--wide {
+    max-width: $container-wide;
   }
-  
-  @include atXLarge {
-    padding: 0;
+
+  &__main {
+    background-color: $color-tertiary;
   }
 }

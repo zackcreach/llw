@@ -7,10 +7,10 @@
 }
 
 body {
-	color: $text-body-color;
+	color: $color-primary;
 	
 	@include atSmall {
-		color: lighten($text-body-color, 18%);
+		color: lighten($color-primary, 18%);
 	}
 }
 
@@ -22,27 +22,29 @@ img {
 h1 {
 	font-family: $font-secondary;
 	font-weight: 300;
-	color: $text-title-color;
-	font-size: 2.31rem;
-	line-height: 52px;
+	color: lighten($color-primary, 30%);
+	font-size: 1.8rem;
+	line-height: 38px;
+	
+	@include atSmall {
+		font-size: 2.31rem;
+		line-height: 52px;
+	}
 }
 
 h2 {
-	color: $text-title-color;
-	font-size: 1.43rem;
-	line-height: 35px;
+	font-family: $font-secondary;
+	font-weight: 300;
+	color: lighten($color-primary, 30%);
+	font-size: 1.35rem;
+	line-height: 34px;
 }
 
 h3 {
-	font-size: .81rem;
-	line-height: 19px;
-	color: $text-subtitle-mobile-color;
+	color: lighten($color-primary, 30%);
+	font-size: 0.7rem;
 	text-transform: uppercase;
-	letter-spacing: 5px;
-	
-	@include atMedium {
-		color: $text-subtitle-color;
-	}
+	letter-spacing: 3px;
 }
 
 h4 {
@@ -60,12 +62,12 @@ h5 {
 }
 
 p {
-	color: $text-body-color;
-	font-size: .81rem;
-	line-height: 24px;
+	color: lighten($color-primary, 20%);
+	font-size: 1rem;
+	line-height: 26px;
 
 	@include atSmall {
-		color: lighten($text-body-color, 18%);
+		color: lighten($color-primary, 20%);
 	}
 }
 
@@ -76,13 +78,13 @@ ul {
 }
 
 a {
-	color: $primary-color;
+	color: $color-primary;
 	text-decoration: none;
 	transition: $transition-ease;
 }
 
 a:hover {
-	color: darken($primary-color, 15%);
+	color: lighten($color-primary, 20%);
 }
 
 input, textarea, option {

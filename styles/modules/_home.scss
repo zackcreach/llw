@@ -1,0 +1,174 @@
+.home {
+
+  img {
+    filter: saturate(90%);
+    transition: $transition-ease;
+
+    &:hover {
+      filter: saturate(110%);
+    }
+  }
+  
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__main {
+    background-color: $color-tertiary;
+    padding: 60px $padding-mobile 30px $padding-mobile;
+    overflow: hidden;
+    
+    @include atSmall {
+      padding: 60px $padding-desktop 30px $padding-desktop;
+    }
+    
+    @include atMedium {
+      padding: 60px 0 30px 0;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__button {
+    
+    @include atSmall {
+      width: 230px;
+    }
+  }
+  
+  &__featured {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__featured-title {
+    margin: 25px 0 35px;
+  }
+
+  &__featured-image-container {
+  }
+  
+  &__featured-image {
+    margin: 0 0 30px 0;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    min-height: 50vmin;
+    max-height: 50vmin;
+    
+    @include atMedium {
+      margin: 0 0 45px 0;
+    }
+  }
+  
+  &__featured-button {
+    margin: 0 0 50px 0;
+    
+    @include atSmall {
+      width: 250px;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    @include atSmall {
+      // flex-wrap: nowrap;
+    }
+  }
+
+  &__block {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    background-color: transparent;
+    position: relative;
+    pointer-events: auto;
+    
+    @include atMedium {
+      flex: 1 1 50%;
+      box-shadow: 1px 1px 0px lighten($color-primary, 78%);
+      padding: 60px;
+
+      &:nth-of-type(odd) {
+        border-top: 1px solid $color-secondary;
+        border-right: 1px solid $color-secondary;
+      }
+      
+      &:nth-of-type(even) {
+        border-top: 1px solid $color-secondary;
+      }
+      
+      &:last-of-type, &:nth-last-of-type(2) {
+        // border-bottom: 1px solid $color-secondary;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid lighten($color-primary, 78%);
+        pointer-events: none;
+      }
+    }
+
+    @include atLarge {
+      
+    }
+  }
+
+  &__block-date {
+    margin: 0 0 9px 0;
+  }
+
+  &__block-title {
+    margin: 0 0 20px 0;
+    text-align: center;
+    max-height: 34px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    @include atSmall {
+      width: 400px;
+    }
+  }
+
+  &__block-image-container {
+    margin: 0 0 30px 0;
+  }
+
+  &__block-image {
+    object-fit: cover;
+    width: 100%;
+    min-height: 50vmin;
+    max-height: 50vmin;
+    
+    @include atMedium {
+      min-height: 23vw;
+      max-height: 23vw;
+    }
+    
+    @include atLarge {
+      min-height: 300px;
+      max-height: 300px;
+    }
+  }
+}

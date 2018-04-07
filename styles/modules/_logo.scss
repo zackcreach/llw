@@ -1,0 +1,25 @@
+.logo {
+  font-weight: 400;
+  
+  &--large {
+    font-size: 11vw;
+    line-height: 1;
+    // font-family: $font-primary;
+    // text-transform: uppercase;
+    // font-weight: 100;
+    // text-shadow: 1px 1px 0px lighten($color-primary, 50%), 2px 2px 0px lighten($color-primary, 50%),  3px 3px 0px lighten($color-primary, 50%);
+    
+    @include atSmall {
+      font-size: 8.5vw;
+      letter-spacing: -0.1vw;
+    }
+    @include atLarge {
+      font-size: 6rem;
+      letter-spacing: -0.1vmin;
+    }
+  }
+  
+  &--white {
+    color: #eee8e9;
+  }
+}

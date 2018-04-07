@@ -5,37 +5,6 @@ const zip = require("gulp-zip");
 const browserSync = require("browser-sync");
 const nodemon = require("gulp-nodemon");
 
-// gulp plugins and utils
-// const gutil = require('gulp-util');
-// const livereload = require('gulp-livereload');
-// const nodemon = require('gulp-nodemon');
-// const postcss = require('gulp-postcss');
-// const sourcemaps = require('gulp-sourcemaps');
-
-// postcss plugins
-// const autoprefixer = require('autoprefixer');
-// const colorFunction = require('postcss-color-function');
-// const cssnano = require('cssnano');
-// const customProperties = require('postcss-custom-properties');
-// const easyimport = require('postcss-easy-import');
-
-// const swallowError = function swallowError(error) {
-//     gutil.log(error.toString());
-//     gutil.beep();
-//     this.emit('end');
-// };
-
-// const nodemonServerInit = function () {
-//     livereload.listen(1234);
-// };
-
-// gulp.task('build', ['css'], function (/* cb */) {
-//     return nodemonServerInit();
-// });
-
-// gulp.task('watch', function () {
-//     gulp.watch('assets/css/**', ['css']);
-// });
 
 gulp.task("sass", () => {
     return gulp
