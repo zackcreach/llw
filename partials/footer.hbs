@@ -1,31 +1,25 @@
 <footer class="footer">
-    <div class="container footer__container">
+    <div class="footer__container">
         <div class="footer__column">
-            <h5 class="footer__title">
-                Popular Articles
-            </h5>
+            <h3 class="footer__title">
+                Recent Articles
+            </h3>
             <ul class="footer__list">
-                {{#get "posts" filter="tags:popular"}}
+                {{#get "posts"}}
                     {{#foreach posts limit="3"}}
                         <li class="footer__item footer__item--article">
                             <a class="footer__text footer__link" href="{{url}}">
                                 {{title}}
-                                <div class="footer__thumbnail" style="background-image: url({{feature_image}}); background-size: cover;"></div>
+                                {{!-- <div class="footer__thumbnail" style="background-image: url({{feature_image}}); background-size: cover;"></div> --}}
                             </a>
                         </li>
                     {{/foreach}}
-                    {{!-- <li class="footer__item footer__item--article">
-                        <a class="footer__text footer__link" href="">
-                            Did You Know That Airport Hotels Are The Right Way To Start A Short Break Holiday
-                            <div class="footer__thumbnail" style="background-image: url({{asset "images/article-2.jpg"}}); background-size: cover;"></div>
-                        </a>
-                    </li> --}}
                 {{/get}}
             </ul>
         </div>
-        <div class="footer__column">
+        {{!-- <div class="footer__column">
             <h5 class="footer__title">
-                Magazine
+                Life Less Wasteful
             </h5>
             <ul class="footer__list">
                 <li class="footer__item">
@@ -33,83 +27,19 @@
                         Discoveries
                     </a>
                 </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="/tag/travel-tales">
-                        Travel Tales
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="/tag/tips-tricks">
-                        Tips &amp; Tricks
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="/tag/our-backpack">
-                        Our Backpack
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="/tag/discoverer-spotlight">
-                        Discoverer Spotlight
-                    </a>
-                </li>
             </ul>
-        </div>
+        </div> --}}
         <div class="footer__column">
-            <h5 class="footer__title">
-                Connect
-            </h5>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <div class="footer__social">
-                        <a class="footer__social-link" href="https://www.instagram.com/thedscvrr">
-                            <img src="{{asset "images/icon-instagram.png"}}" alt="Instagram Logo" class="footer__social-image">
-                        </a>
-                        <a class="footer__social-link" href="https://www.facebook.com/thedscvrr">
-                            <img src="{{asset "images/icon-facebook.png"}}" alt="Facebook Logo" class="footer__social-image">
-                        </a>
-                        <a class="footer__social-link" href="https://twitter.com/thedscvrr">
-                            <img src="{{asset "images/icon-twitter.png"}}" alt="Twitter Logo" class="footer__social-image">
-                        </a>
-                    </div>
-                </li>
-                <li class="footer__item footer__question">
-                    Want to write for The Discoverer?
-                    <a class="footer__link-question" href="">Learn more here!</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__column">
-            <h5 class="footer__title">
-                The Discoverer
-            </h5>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="https://thediscoverer.com">
-                        TheDiscoverer.com
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="https://thediscoverer.com/story">
-                        Our Story
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="https://thediscoverer.com/editions">
-                        Previous Editions
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="https://thediscoverer.com/destinations">
-                        Upcoming Destinations
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="https://thediscoverer.com/testimonials">
-                        Testimonials
-                    </a>
-                </li>
-            </ul>
+            <h3 class="footer__title">
+                <a href="https://www.instagram.com/life.less.wasteful/" target="_blank">
+                    Instagram
+                </a>
+            </h3>
+            <div class="footer__instagram">
+                <div class="instagram">
+                    <div class="instagram__container">Loading Posts...</div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

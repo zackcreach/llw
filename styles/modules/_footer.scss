@@ -1,0 +1,31 @@
+.footer {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+    
+    @include atSmall {
+      margin-bottom: 0;
+      flex: 1 1 50%;
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    line-height: 24px;
+    margin: 0 20px 8px 0;
+  }
+
+  &__title {
+    margin: 0 0 15px 0;
+  }
+}

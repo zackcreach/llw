@@ -1,11 +1,13 @@
 .home {
 
   img {
-    filter: saturate(90%);
+    opacity: 0.95;
+    filter: grayscale(10%);
     transition: $transition-ease;
 
     &:hover {
-      filter: saturate(110%);
+      opacity: 1;
+      filter: grayscale(0%);
     }
   }
   
@@ -18,15 +20,15 @@
   
   &__main {
     background-color: $color-tertiary;
-    padding: 60px $padding-mobile 30px $padding-mobile;
+    padding: 45px $padding-mobile 0 $padding-mobile;
     overflow: hidden;
     
     @include atSmall {
-      padding: 60px $padding-desktop 30px $padding-desktop;
+      padding: 50px $padding-desktop 0 $padding-desktop;
     }
     
     @include atMedium {
-      padding: 60px 0 30px 0;
+      padding: 60px 0 0 0;
     }
   }
 
@@ -177,6 +179,20 @@
     @include atLarge {
       min-height: 300px;
       max-height: 300px;
+    }
+  }
+
+  &__footer {
+    background-color: white;
+    padding: 45px $padding-mobile 45px $padding-mobile;
+    overflow: hidden;
+    
+    @include atSmall {
+      padding: 50px $padding-desktop 80px $padding-desktop;
+    }
+    
+    @include atMedium {
+      padding: 60px 60px 100px;
     }
   }
 }
