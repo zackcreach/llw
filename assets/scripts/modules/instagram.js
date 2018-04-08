@@ -27,7 +27,6 @@ const addPost = (container, src, href, caption) => {
   container.appendChild(link);
 };
 const createPosts = ({ data }) => {
-  console.log(data);
   instagramContainer.textContent = "";
   data.map((post, index) => {
     if (index <= 4) {

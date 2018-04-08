@@ -3,39 +3,50 @@
 {{!-- {{> "banner"}} --}}
 
 {{#post}}
-<div class="post">
-    <div class="hero hero__post">
-        <div class="hero__background" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/header-hero-background.jpg'}}{{/if}}); background-size: cover;"></div>
-        <div class="hero__content">
-                <h3 class="hero__subtitle">
-                    {{#primary_tag}}
-                        <a class="hero__link" href={{url}}>
-                            {{name}}
-                        </a>
-                    {{/primary_tag}}
-                </h3>
-                <h1 class="hero__title">
-                    {{title}}
-                </h1>
-        </div>
+<div class="hero__background" style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/post__background.jpg'}}{{/if}}); background-size: cover;"></div>
+<div class="container container--wide post">
+  <div class="hero hero__post">
+    <div class="hero__content">
+      <h2 class="hero__logo">
+        <a href="/" class="hero__link">
+          {{meta_title}}
+        </a>
+      </h2>
+      <h1 class="hero__title">
+        {{title}}
+      </h1>
+      <h3 class="hero__subtitle">
+        {{!-- {{#primary_tag}}
+          <a class="hero__link" href={{url}}>
+            {{name}}
+          </a>
+        {{/primary_tag}} --}}
+        {{date format="MMMM D, YYYY"}}
+      </h3>
     </div>
-    <div class="post__container">
-        <div class="post__header">
-            <div class="post__date">
-                {{date published_at format="MMM DD, YYYY"}}
-            </div>
-            <div class="post__categories">
-                {{#foreach tags limit="6"}}
-                    <a class="post__category" href="{{url}}">
-                        {{name}}
-                    </a>
-                {{/foreach}}
-            </div>
-        </div>
-        <div class="post__content">
-            {{content}}
-        </div>
+  </div>
+  <main class="post__main">
+    {{!-- <div class="container post__header">
+      <h3 class="post__date">
+        {{date published_at format="MMM DD, YYYY"}}
+      </h3>
+      <div class="post__categories">
+        {{#foreach tags limit="6"}}
+        <a class="post__category" href="{{url}}">
+          {{name}}
+        </a>
+        {{/foreach}}
+      </div>
+    </div> --}}
+    <div class="container post__content">
+      {{content}}
     </div>
+  </main>
+  <footer class="post__footer">
+    <div class="container">
+      {{> "footer"}}
+    </div>
+  </footer>
 </div>
 
 {{!-- {{> "gallery"}} --}}
