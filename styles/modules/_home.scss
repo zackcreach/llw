@@ -141,13 +141,21 @@
   &__block-title {
     margin: 0 0 20px 0;
     text-align: center;
-    max-height: 34px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     
-    @include atSmall {
-      width: 400px;
+    @include atMedium {
+      max-height: 34px;
+      width: 325px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    
+    @include atLarge {
+      max-height: 34px;
+      width: 450px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 
