@@ -2,15 +2,15 @@
   
   &__logo {
     color: lighten($color-primary, 80%);
-    padding: 14vmin 0 3vmin;
+    padding: 12vmin 0 3vmin;
     text-align: center;
     
     @include atSmall {
-      padding: 10vmin 0 3vmin;
+      padding: 8vmin 0 3vmin;
     }
     
     @include atLarge {
-      padding: 65px 0 25px;
+      padding: 58px 0 25px;
     }
   }
 

@@ -1,5 +1,6 @@
 .wrapper {
   min-height: 100vh;
+  padding: 0 3.5%;
   border-top: 6px solid lighten($color-tertiary, 5%);
   position: relative;
   
@@ -14,17 +15,20 @@
     z-index: -3;
   }
 
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 200vh;
-    background-image: radial-gradient(lighten($color-tertiary, 5%), $color-secondary 70%, $color-secondary);
-    background-size: cover;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    z-index: -2;
+  &--glow {
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      background-image: radial-gradient(lighten($color-tertiary, 5%), $color-secondary 70%, $color-secondary);
+      background-size: 100% 1200px;
+      background-position: center 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -2;
+    }
   }
 }

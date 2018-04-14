@@ -2,14 +2,14 @@
 
   &__main {
     background-color: $color-tertiary;
-    padding: 45px $padding-mobile 45px $padding-mobile;
+    padding: 40px $padding-mobile 45px $padding-mobile;
     overflow: hidden;
     
     @include atSmall {
       padding: 50px $padding-desktop 50px $padding-desktop;
     }
     
-    @include atMedium {
+    @include atLarge {
       padding: 60px 0 60px 0;
     }
   }
@@ -216,17 +216,24 @@
     }
 
     p {
-      padding-bottom: 30px;
-      font-size: 1.1rem;
-      line-height: 30px;
+      padding-bottom: 25px;
       width: 100%;
-      color: lighten($color-primary, 25%);
       font-weight: 400;
       
       @include atSmall {
-        padding-bottom: 45px;
-        font-size: 1.35rem;
-        color: lighten($color-primary, 20%);
+        padding-bottom: 35px;
+      }
+    }
+    
+    li, p, a, code, em, i {
+      font-size: 1.1rem;
+      line-height: 30px;
+      color: lighten($color-primary, 10%);
+      font-weight: 400;
+      
+      @include atSmall {
+        font-size: 1.25rem;
+        color: $color-primary;
         line-height: 36px;
         font-weight: 300;
       }
@@ -237,21 +244,96 @@
     }
     
     a {
-      font-weight: 400;
+      position: relative;
+      white-space: pre;
+
+      &:hover::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        content: '';
+        height: 2px;
+        width: 100%;
+        border-bottom: 2px solid white;
+        
+        @include atSmall {
+          height: 1px;
+          border-bottom: 1px solid white;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        content: '';
+        height: 2px;
+        width: 100%;
+        border-bottom: 2px solid $color-secondary;
+        
+        @include atSmall {
+          height: 1px;
+          border-bottom: 1px solid $color-secondary;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        content: '';
+        height: 2px;
+        width: 0%;
+        border-bottom: 2px solid white;
+        transition: width 0.5s ease-in-out;
+        
+        @include atSmall {
+          height: 1px;
+          border-bottom: 1px solid white;
+        }
+      }
     }
     
     pre, ul, ol {
       width: 100%;
-      padding-top: 10px;
-      padding-bottom: 30px;
+      padding-bottom: 25px;
+      
+      @include atSmall {
+        padding-bottom: 35px;
+      }
     }
     
     ol {
-      padding-left: 15px;
+      padding-left: 35px;
+      list-style-type: none;
+      
+      & li {
+        padding-bottom: 5px;
+        counter-increment: step-counter;
+        position: relative;
+      }
+
+      & li::before {
+        padding-bottom: 5px;
+        content: counter(step-counter);
+        font-size: 1.6rem; 
+        position: absolute;
+        font-weight: 300;
+        left: -28px;
+        bottom: 1px;
+      }
     }
     
     ul {
+      padding-left: 19px;
       list-style: inside;
+
+      & li {
+        padding-bottom: 5px;
+      }
     }
     
     code {
@@ -259,7 +341,7 @@
       color: #454545;
       padding-right: 6px;
       padding-left: 6px;
-      background-color: #F1F1F1;
+      background-color: $color-secondary;
       border-radius: 3px;
     }
     
@@ -268,8 +350,7 @@
     }
     
     h1 {
-      color: lighten($color-primary, 20%);
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       line-height: 42px;
       padding-bottom: 20px;
       
@@ -281,25 +362,32 @@
     }
     
     h2 {
-      color: lighten($color-primary, 20%);
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       line-height: 40px;
       padding-bottom: 15px;
       
       @include atSmall {
         padding-bottom: 25px;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
         line-height: 42px;
       }
     }
 
     h3 {
       // padding-top: 30px;
-      padding-bottom: 12px;
+      font-size: 1rem;
+      font-weight: 400;
+      width: 100%;
+      text-align: left;
+      padding-bottom: 20px;
     }
     
     strong {
-      font-weight: 600;
+      font-weight: 700;
+      
+      @include atSmall {
+        font-weight: 400;
+      }
     }
 
     img {

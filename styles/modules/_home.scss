@@ -50,6 +50,14 @@
   &__featured {
     text-align: center;
     margin-bottom: 50px;
+    
+    @include atMedium {
+      padding: 0 $padding-desktop 0 $padding-desktop;
+    }
+    
+    @include atLarge {
+      padding: 0;
+    }
   }
 
   &__featured-title {
@@ -168,17 +176,14 @@
   &__block-image {
     object-fit: cover;
     width: 100%;
-    min-height: 50vmin;
-    max-height: 50vmin;
+    height: 50vmin;
     
     @include atMedium {
-      min-height: 23vw;
-      max-height: 23vw;
+      height: 23vw;
     }
     
     @include atLarge {
-      min-height: 300px;
-      max-height: 300px;
+      height: 300px;
     }
   }
 

@@ -11,26 +11,28 @@
   border: none;
   z-index: 1;
   cursor: pointer;
-
+  box-shadow: 1px 1px 0px #f1ebec;
+  
   &:active {
       transform: translateY(1px);
       transition: $transition-ease;
       cursor: pointer;
-  }
-  
-  &:focus {
-      outline: 0;
-      cursor: pointer;
-  }
-
-  &__solid {
-      color: white;
-      //   background-color: lighten($color-primary, 45%);
-      background-color: $color-secondary;
-      
-      &:hover {
-        color: $color-secondary;
-          background-color: white;
+    }
+    
+    &:focus {
+        outline: 0;
+        cursor: pointer;
+    }
+    
+    &__solid {
+        color: white;
+        //   background-color: lighten($color-primary, 45%);
+        background-color: $color-secondary;
+        
+        &:hover {
+            color: $color-primary;
+            background-color: white;
+            box-shadow: none;
       }
   }
 }

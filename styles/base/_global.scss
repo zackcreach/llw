@@ -19,10 +19,13 @@ img {
 	height: auto;
 }
 
-h1 {
+h1, h2 {
+	color: lighten($color-primary, 20%);
 	font-family: $font-secondary;
 	font-weight: 300;
-	color: lighten($color-primary, 30%);
+}
+
+h1 {
 	font-size: 1.8rem;
 	line-height: 38px;
 	
@@ -34,8 +37,7 @@ h1 {
 
 h2 {
 	font-family: $font-secondary;
-	font-weight: 300;
-	color: lighten($color-primary, 30%);
+	color: lighten($color-primary, 20%);
 	font-size: 1.35rem;
 	line-height: 34px;
 }
