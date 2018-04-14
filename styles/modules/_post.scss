@@ -225,7 +225,7 @@
       }
     }
     
-    li, p, a, code, em, i {
+    li, p, code, em, i {
       font-size: 1.1rem;
       line-height: 30px;
       color: lighten($color-primary, 10%);
@@ -238,14 +238,42 @@
         font-weight: 300;
       }
     }
+
+    mark {
+      background-color: white;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    blockquote {
+      border-left: 6px solid $color-secondary;
+      font-style: italic;
+      margin-bottom: 25px;
+
+      & p {
+        color: lighten($color-primary, 45%);
+        padding: 0 0 0 28px;
+      }
+    }
     
     strong, b {
       font-weight: 400;
     }
     
-    a {
+    a:not(img) {
       position: relative;
       white-space: pre;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      font-weight: inherit;
+      
+      @include atSmall {
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+      }
 
       &:hover::after {
         position: absolute;
@@ -311,7 +339,7 @@
       list-style-type: none;
       
       & li {
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         counter-increment: step-counter;
         position: relative;
       }
@@ -319,20 +347,30 @@
       & li::before {
         padding-bottom: 5px;
         content: counter(step-counter);
+        color: $color-secondary;
         font-size: 1.6rem; 
         position: absolute;
-        font-weight: 300;
+        font-weight: 400;
         left: -28px;
-        bottom: 1px;
       }
     }
     
     ul {
-      padding-left: 19px;
-      list-style: inside;
+      padding-left: 35px;
+      list-style: none;
 
       & li {
-        padding-bottom: 5px;
+        padding-bottom: 10px;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '•';
+          font-size: 1.1rem;
+          left: -28px;
+          top: 0;
+          color: $color-secondary;
+        }
       }
     }
     
