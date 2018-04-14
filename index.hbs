@@ -25,6 +25,11 @@
           <img class="home__featured-image" src={{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/home__featured.jpg'}}{{/if}} />
         </a>
         <a class="home__link" href={{url}}>
+          <p class="home__text home__featured-text">
+            {{excerpt characters="140"}}...
+          </p>
+        </a>
+        <a class="home__link" href={{url}}>
           <button class="button button__solid home__button">
             Read More
           </button>
@@ -46,6 +51,11 @@
           </h2>
           <a class="home__link home__block-image-container" href={{url}}>
             <img class="home__block-image" src={{#if feature_image}}{{feature_image}}{{else}}{{asset 'images/home__block.jpg'}}{{/if}} />
+          </a>
+          <a class="home__link" href={{url}}>
+            <p class="home__text">
+              {{excerpt characters="140"}}...
+            </p>
           </a>
           <a class="home__link" href={{url}}>
             <button class="button button__solid home__button">

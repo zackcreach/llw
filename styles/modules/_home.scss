@@ -40,6 +40,15 @@
     width: 100%;
   }
 
+  &__text {
+    margin: 0 auto 30px auto;
+    max-width: 500px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
   &__button {
     
     @include atSmall {
@@ -74,9 +83,16 @@
     width: 100%;
     min-height: 50vmin;
     max-height: 50vmin;
-    
-    @include atMedium {
-      margin: 0 0 45px 0;
+  }
+
+  &__featured-text {
+    font-size: 1rem;
+    line-height: 26px;
+
+    @include atSmall {
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 32px;
     }
   }
   
