@@ -2,12 +2,14 @@
 
 <section class="container container--wide home">
   <header class="header home__header">
-    <h1 class="logo logo--large header__logo">
-      {{@blog.title}}
-    </h1>
-    <p class="header__tagline">
+    <a href="/">
+      <h1 class="logo logo--large header__logo">
+          {{@blog.title}}
+      </h1>
+    </a>
+    <h3 class="header__tagline">
       {{@blog.description}}
-    </p>
+    </h3>
   </header>
   <main class="home__main">
     {{#get "posts" filter="featured:true" limit="1" as |featured|}}
@@ -37,7 +39,7 @@
       </div>
     {{/foreach}}
     {{/get}}
-    {{#get "posts" limit="8" as |blocks|}}
+    {{#get "posts" filter="featured:false" limit="2" as |blocks|}}
       <div class="home__blocks">
         {{#foreach blocks}}
         <div class="home__block">
@@ -54,7 +56,7 @@
           </a>
           <a class="home__link" href={{url}}>
             <p class="home__text">
-              {{excerpt characters="140"}}...
+              {{excerpt characters="160"}}...
             </p>
           </a>
           <a class="home__link" href={{url}}>

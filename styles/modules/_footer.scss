@@ -8,9 +8,13 @@
 
   &__column {
     flex: 1 1 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     
-    @include atSmall {
+    @include atCustom(800px) {
       margin-bottom: 0;
       flex: 1 1 50%;
     }
@@ -27,5 +31,30 @@
 
   &__title {
     margin: 0 0 15px 0;
+  }
+
+  &__about {
+    display: flex;
+
+  }
+
+  &__about-image {
+    width: 65px;
+    height: 65px;
+    opacity: 1;
+    object-fit: cover;
+    object-position: 10% top;
+    border-radius: 200px;
+  }
+
+  &__about-text {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin: -7px 0 0 20px;
+    
+    @include atSmall {
+      margin: -7px 12% 0 25px;
+      max-width: 360px;
+    }
   }
 }

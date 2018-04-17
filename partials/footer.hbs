@@ -2,33 +2,15 @@
     <div class="footer__container">
         <div class="footer__column">
             <h3 class="footer__title">
-                Recent Articles
+                About Me
             </h3>
-            <ul class="footer__list">
-                {{#get "posts"}}
-                    {{#foreach posts limit="3"}}
-                        <li class="footer__item footer__item--article">
-                            <a class="footer__text footer__link" href="{{url}}">
-                                {{title}}
-                                {{!-- <div class="footer__thumbnail" style="background-image: url({{feature_image}}); background-size: cover;"></div> --}}
-                            </a>
-                        </li>
-                    {{/foreach}}
-                {{/get}}
-            </ul>
+            <div class="footer__about">
+                <img class="footer__about-image" src="http://res.cloudinary.com/lifelesswasteful/image/upload/c_scale,w_150/v1523932167/IMG_4089.jpg" alt="Photo of author Skylar Denney">
+                <p class="footer__about-text">
+                    Hiya! I’m Skylar, a recent convert to the zero waste lifestyle. I’m documenting my journey to live a more conscious life that’s better for the planet and the people on it. Stick around if you’re looking to commiserate on the sometimes tricky, but mostly awesome world of zero waste.
+                </p>
+            </div>
         </div>
-        {{!-- <div class="footer__column">
-            <h5 class="footer__title">
-                Life Less Wasteful
-            </h5>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a class="footer__text footer__link" href="/tag/discoveries">
-                        Discoveries
-                    </a>
-                </li>
-            </ul>
-        </div> --}}
         <div class="footer__column">
             <h3 class="footer__title">
                 <a href="https://www.instagram.com/life.less.wasteful/" target="_blank">

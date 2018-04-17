@@ -1,13 +1,12 @@
 .home {
 
   img {
-    opacity: 0.95;
-    filter: grayscale(10%);
+    box-shadow: 1px 1px 0px #f1ebec;
+    opacity: 0.97;
     transition: $transition-ease;
 
     &:hover {
       opacity: 1;
-      filter: grayscale(0%);
     }
   }
   
@@ -58,7 +57,7 @@
   
   &__featured {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     
     @include atMedium {
       padding: 0 $padding-desktop 0 $padding-desktop;
@@ -79,10 +78,8 @@
   &__featured-image {
     margin: 0 0 30px 0;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
     width: 100%;
-    min-height: 50vmin;
-    max-height: 50vmin;
   }
 
   &__featured-text {
@@ -106,12 +103,8 @@
 
   &__blocks {
     display: flex;
-    flex-wrap: wrap;
     overflow: hidden;
-    
-    @include atSmall {
-      // flex-wrap: nowrap;
-    }
+    flex-wrap: wrap;
   }
 
   &__block {
@@ -120,11 +113,11 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 60px;
     background-color: transparent;
     position: relative;
     pointer-events: auto;
-    
+
     @include atMedium {
       flex: 1 1 50%;
       box-shadow: 1px 1px 0px lighten($color-primary, 78%);
@@ -179,9 +172,6 @@
     @include atLarge {
       max-height: 34px;
       width: 450px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
     }
   }
 
@@ -191,6 +181,7 @@
 
   &__block-image {
     object-fit: cover;
+    object-position: center top;
     width: 100%;
     height: 50vmin;
     
@@ -205,15 +196,15 @@
 
   &__footer {
     background-color: white;
-    padding: 45px $padding-mobile 45px $padding-mobile;
+    padding: 60px $padding-mobile 60px $padding-mobile;
     overflow: hidden;
     
     @include atSmall {
-      padding: 50px $padding-desktop 80px $padding-desktop;
+      padding: 80px $padding-desktop 80px $padding-desktop;
     }
     
     @include atMedium {
-      padding: 60px 60px 100px;
+      padding: 80px 60px 100px;
     }
   }
 }

@@ -23,11 +23,11 @@
       right: 0;
       left: 0;
       height: 100%;
-      background-image: radial-gradient(lighten($color-tertiary, 5%), $color-secondary 70%, $color-secondary);
-      background-size: 100% 1200px;
-      background-position: center 0;
+      background-image: radial-gradient(lighten($color-tertiary, 4%), $color-secondary 70%, $color-secondary);
+      background-size: 100% 1500px;
+      background-position: center top;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      transform: translate3d(0, 0, 0);
       z-index: -2;
     }
   }

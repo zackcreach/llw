@@ -16,15 +16,15 @@
 
   &__footer {
     background-color: white;
-    padding: 45px $padding-mobile 45px $padding-mobile;
+    padding: 60px $padding-mobile 60px $padding-mobile;
     overflow: hidden;
     
     @include atSmall {
-      padding: 50px $padding-desktop 80px $padding-desktop;
+      padding: 80px $padding-desktop 80px $padding-desktop;
     }
     
     @include atMedium {
-      padding: 60px 0 80px;
+      padding: 80px 60px 100px;
     }
   }
 

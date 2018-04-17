@@ -15,20 +15,19 @@
   }
 
   &__tagline {
-    color: lighten($color-primary, 75%);
+    color: white;
     // color: lighten($color-primary, 40%);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
     line-height: 1.3rem;
     font-weight: 300;
-    padding: 0 0 7vmin;
+    padding: 0 0 5vmin;
     max-width: 300px;
     text-align: center;
     
     @include atSmall {
       padding: 0 0 5vmin;
-      max-width: 400px;
-      font-size: 1rem;
-      line-height: 1.75rem;
+      max-width: 425px;
     }
     
     @include atLarge {
