@@ -1,7 +1,7 @@
 .header {
   
   &__logo {
-    color: lighten($color-primary, 80%);
+    color: white;
     padding: 12vmin 0 3vmin;
     text-align: center;
     
@@ -20,12 +20,13 @@
     font-size: 0.7rem;
     letter-spacing: 2px;
     line-height: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0 0 5vmin;
-    max-width: 300px;
+    max-width: 260px;
     text-align: center;
     
     @include atSmall {
+      font-weight: 300;
       padding: 0 0 5vmin;
       max-width: 425px;
     }

@@ -19,8 +19,8 @@ img {
 	height: auto;
 }
 
-h1, h2, h3 {
-	color: lighten($color-primary, 20%);
+h1, h2 {
+	color: lighten($color-primary, 17%);
 	font-weight: 300;
 }
 
@@ -44,9 +44,11 @@ h2 {
 }
 
 h3 {
+	color: $color-primary;
 	font-size: 0.7rem;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	font-weight: 300;
 }
 
 h4 {
@@ -64,12 +66,12 @@ h5 {
 }
 
 p {
-	color: lighten($color-primary, 20%);
+	color: $color-primary;
 	font-size: 1rem;
 	line-height: 26px;
 
 	@include atSmall {
-		color: lighten($color-primary, 20%);
+		color: $color-primary;
 	}
 }
 
