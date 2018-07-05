@@ -39,7 +39,7 @@
       </div>
     {{/foreach}}
     {{/get}}
-    {{#get "posts" limit="4" as |blocks|}}
+    {{#get "posts" filter="featured:true" limit="4" as |blocks|}}
       <div class="home__blocks">
         {{#foreach blocks}}
         <div class="home__block">
