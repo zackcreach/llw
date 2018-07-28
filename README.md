@@ -1,6 +1,6 @@
 # Life Less Wasteful Theme
 
-A custom-built Ghost theme for Life Less Wasteful by Zack Creach..
+A custom-built Ghost theme for Life Less Wasteful by Zack Creach.
 
 **The main files are:**
 
