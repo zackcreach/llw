@@ -204,17 +204,15 @@
   }
 
   &__content {
-    
-    .kg-card-markdown > p:nth-child(1)::first-letter {
-      // font-family: $font-secondary;
-      // font-size: 4.06rem;
-      // float: left;
-      // line-height: 56px;
-      // margin-right: 8px;
-      // text-transform: uppercase;
-      // color: #444;
-    }
 
+    .kg-width-wide {
+      width: 100%;
+    }
+    
+    .kg-width-full {
+      width: 100%;
+    }
+    
     p {
       padding-bottom: 25px;
       width: 100%;
